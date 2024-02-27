@@ -10,6 +10,8 @@
 // Функції
 @import "functions";
 
+// =============================================================================================================
+
 .wrapper {
    min-height: 100%;
    display: flex;
@@ -40,6 +42,126 @@ body {
    }
 }
 
+// =============================================================================================================
+
 // Компоненти
 @import "common";
 @import "header";
+
+// =============================================================================================================
+
+.page {
+   // .page__hero
+   &__hero {
+      margin-top: toRem(150);
+      @media (max-width: toEm($tablet)) {
+         margin-top: toRem(100);
+      }
+      @media (max-width: toEm($mobile)) {
+         margin-top: toRem(70);
+      }
+   }
+}
+
+// =============================================================================================================
+
+.hero {
+   background-color: $mainBgColor;
+   color: $lightTextColor;
+   // .hero__container
+   &__container {
+      display: flex;
+      column-gap: toRem(60);
+      justify-content: space-between;
+      align-items: center;
+      padding-top: toRem(24);
+      padding-bottom: toRem(100);
+      @media (max-width: toEm($tablet)) {
+         padding-bottom: toRem(60);
+      }
+      @media (max-width: toEm($mobile)) {
+         flex-direction: column;
+         row-gap: toRem(30);
+         padding-top: toRem(25);
+         padding-bottom: toRem(40);
+         text-align: center;
+      }
+   }
+   // .hero__title
+   &__title {
+      font-size: toRem(50);
+      font-weight: 700;
+      line-height: 133%;
+      text-transform: uppercase;
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(42);
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(38);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(34);
+      }
+   }
+   // .hero__links
+   &__links {
+      flex-basis: toRem(240);
+      min-width: toRem(240);
+      display: flex;
+      flex-direction: column;
+      @media (max-width: toEm($tablet)) {
+         flex-basis: toRem(210);
+         min-width: toRem(210);
+      }
+      @media (max-width: toEm($mobile)) {
+         flex-basis: auto;
+         min-width: 100%;
+      }
+   }
+   // .hero__link
+   &__link {
+      padding-bottom: toRem(8);
+      border-bottom: toRem(1) solid;
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+      justify-content: space-between;
+      transition: color 0.3s;
+      &:not(:last-child) {
+         margin-bottom: toRem(16);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $accentColor;
+            path {
+               stroke: $accentColor;
+            }
+         }
+      }
+      svg {
+         flex: 0 0 toRem(7);
+         width: toRem(7);
+      }
+      path {
+         transition: stroke 0.3s;
+      }
+   }
+   // .hero__image
+   &__image {
+      max-width: toRem(1920);
+      margin: 0 auto;
+      @media (max-width: toEm($tablet)) {
+         height: toRem(400);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         height: toRem(350);
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+// =============================================================================================================
