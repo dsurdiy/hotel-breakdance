@@ -61,6 +61,13 @@ body {
          margin-top: toRem(70);
       }
    }
+   // .page__services
+   &__services {
+      padding: toRem(70) toRem(0);
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(40) toRem(0);
+      }
+   }
 }
 
 // =============================================================================================================
@@ -165,3 +172,52 @@ body {
 }
 
 // =============================================================================================================
+
+.services {
+   // .services__container
+   &__container {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: toRem(40);
+      row-gap: toRem(20);
+      align-items: center;
+      justify-content: center;
+   }
+   // .services__item
+   &__item {
+      display: flex;
+      gap: toRem(20);
+      align-items: center;
+   }
+   // .services__image
+   &__image {
+      flex: 0 0 toRem(74);
+      width: toRem(74);
+      height: toRem(74);
+      border-radius: 50%;
+      background-color: rgba(255, 119, 0, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: toRem(15);
+      @media (max-width: toEm($mobileSmall)) {
+         flex: 0 0 toRem(50);
+         width: toRem(50);
+         height: toRem(50);
+         padding: toRem(10);
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+   // .services__text
+   &__text {
+      line-height: 131%;
+      color: #565656;
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(14);
+      }
+   }
+}
