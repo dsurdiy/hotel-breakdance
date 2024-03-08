@@ -15,4 +15,10 @@ function documentActions(e) {
    if (targetElement.closest(".menu-icon")) {
       document.body.classList.toggle("menu-open");
    }
+
+   if (targetElement.closest(".menu__link")) {
+      if (document.body.classList.contains("menu-open")) {
+         document.body.classList.remove("menu-open")
+      }
+   }
 }

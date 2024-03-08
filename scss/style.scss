@@ -12,6 +12,10 @@
 
 // =============================================================================================================
 
+:root {
+   scroll-behavior: smooth;
+}
+
 .wrapper {
    min-height: 100%;
    display: flex;
@@ -56,10 +60,10 @@ body {
    &__hero {
       padding-top: toRem(150);
       @media (max-width: toEm($tablet)) {
-         margin-top: toRem(100);
+         padding-top: toRem(80);
       }
       @media (max-width: toEm($mobile)) {
-         margin-top: toRem(70);
+         padding-top: toRem(70);
       }
    }
    // .page__services
