@@ -192,6 +192,11 @@ body.menu-open {
           justify-content: space-between;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.scroll .header__container {
+  min-height: 5rem;
 }
 @media (max-width: 61.99875em) {
   .header__container {
@@ -698,7 +703,7 @@ body.menu-open {
 }
 
 .page__hero {
-  margin-top: 9.375rem;
+  padding-top: 9.375rem;
 }
 @media (max-width: 61.99875em) {
   .page__hero {

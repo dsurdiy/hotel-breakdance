@@ -54,7 +54,7 @@ body {
 .page {
    // .page__hero
    &__hero {
-      margin-top: toRem(150);
+      padding-top: toRem(150);
       @media (max-width: toEm($tablet)) {
          margin-top: toRem(100);
       }

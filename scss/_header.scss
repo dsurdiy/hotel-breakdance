@@ -8,6 +8,9 @@
    color: $lightTextColor;
    // .header__container
    &__container {
+      .scroll & {
+         min-height: toRem(80);
+      }
       min-height: toRem(150);
       display: flex;
       align-items: center;
@@ -15,6 +18,7 @@
       justify-content: space-between;
       padding-top: toRem(5);
       padding-bottom: toRem(5);
+      transition: all 0.7s;
       @media (max-width: toEm($tablet)) {
          min-height: toRem(100);
       }
